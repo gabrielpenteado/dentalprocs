@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Procedure {
+  id         String   @id @default(uuid())
+  title      String
+  created_at DateTime
+
+  dayProcedures DayProcedure[]
+  weekDays      ProcedureWeekDays[]
+
+  @@map("procedures")
+}
+
+model ProcedureWeekDays {
+  id           String @id @default(uuid())
+  procedure_id String
+  week_day     Int
+
+  procedure Procedure @relation(fields: [procedure_id], references: [id])
+
+  @@unique([procedure_id, week_day])
+  @@map("procedure_week_days")
+}
+
+model Day {
+  id   String   @id @default(uuid())
+  date DateTime
+
+  dayProcedures DayProcedure[]
+
+  @@unique([date])
+  @@map("days")
+}
+
+model DayProcedure {
+  id String @id @default(uuid())
+
+  day_id       String
+  procedure_id String
+
+  day       Day       @relation(fields: [day_id], references: [id])
+  procedure Procedure @relation(fields: [procedure_id], references: [id])
+
+  @@unique([day_id, procedure_id])
+  @@map("day_procedures")
+}
