@@ -43,8 +43,7 @@ model Day {
 }
 
 model DayProcedure {
-  id String @id @default(uuid())
-
+  id           String @id @default(uuid())
   day_id       String
   procedure_id String
 
