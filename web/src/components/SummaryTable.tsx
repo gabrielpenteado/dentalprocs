@@ -5,11 +5,12 @@ const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 
 const summaryDates = generateDatesFromYearBeginning();
 
-console.log(summaryDates)
+const minimunSummaryDatesSize = 18 * 7 // 18 weeks
+const amountOfDaysToFill = minimunSummaryDatesSize - summaryDates.length;
 
 export function SummaryTable() {
   return (
-    <div className="w-full flex">
+    <div className="w-full flex justify-center">
       <div className="grid grid-rows-7 grid-flow-row gap-3">
         {weekDays.map((weekDay, index) => {
           return (
@@ -23,24 +24,20 @@ export function SummaryTable() {
       </div>
 
       <div className="grid grid-rows-7 grid-flow-col gap-3">
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
-        <ProcedureDay />
+        {summaryDates.map(date => {
+          return <ProcedureDay key={date.toString()} />
+        })}
+
+        {amountOfDaysToFill > 0 && Array.from({ length: amountOfDaysToFill }).map((_, index) => {
+          return (
+            <div
+              key={index}
+              className="opacity-40 cursor-not-allowed"
+            >
+              <ProcedureDay />
+            </div>
+          )
+        })}
 
       </div>
 
