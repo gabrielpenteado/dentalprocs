@@ -54,6 +54,7 @@ export function Home() {
                   color={colors.zinc[900]}
                   size={DaySize + 7}
                   margin={3}
+                  key={index}
                 />
               ))
           }
