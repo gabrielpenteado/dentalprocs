@@ -25,16 +25,21 @@ export function SummaryTable() {
 
       <div className="grid grid-rows-7 grid-flow-col gap-3">
         {summaryDates.map(date => {
-          return <ProcedureDay key={date.toString()} />
+          return (
+            <ProcedureDay
+              key={date.toString()}
+              amount={5}
+              completed={Math.round(Math.random() * 5)}
+            />)
         })}
 
         {amountOfDaysToFill > 0 && Array.from({ length: amountOfDaysToFill }).map((_, index) => {
           return (
             <div
               key={index}
-              className="opacity-40 cursor-not-allowed"
+              className="opacity-40 cursor-not-allowed pointer-events-none"
             >
-              <ProcedureDay />
+              <ProcedureDay amount={0} completed={0} />
             </div>
           )
         })}
