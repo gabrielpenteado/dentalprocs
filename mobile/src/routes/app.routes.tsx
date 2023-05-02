@@ -24,5 +24,5 @@ export function AppRoutes() {
         component={Procedure}
       />
     </Navigator>
-  )
+  );
 }

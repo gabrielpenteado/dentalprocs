@@ -20,5 +20,5 @@ export function ProcedureDay() {
         margin={3}
       />
     </TouchableOpacity>
-  )
+  );
 }
