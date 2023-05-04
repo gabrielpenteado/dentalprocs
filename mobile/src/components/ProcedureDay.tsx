@@ -1,4 +1,4 @@
-import { TouchableOpacity, Dimensions } from "react-native";
+import { TouchableOpacity, Dimensions, TouchableOpacityProps } from "react-native";
 import { FontAwesome5 } from '@expo/vector-icons';
 import colors from 'tailwindcss/colors';
 
@@ -8,10 +8,14 @@ const screenH_padding = (32 * 2) / 5;
 export const DayMarginBetween = 8;
 export const DaySize = (Dimensions.get('screen').width / weekDays) - (screenH_padding + 5);
 
-export function ProcedureDay() {
+interface Props extends TouchableOpacityProps { };
+
+export function ProcedureDay({ ...rest }: Props) {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
+      {...rest}
+
     >
       <FontAwesome5
         name="tooth"

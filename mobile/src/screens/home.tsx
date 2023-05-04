@@ -1,4 +1,5 @@
 import { View, Text, ScrollView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { FontAwesome5 } from '@expo/vector-icons';
 import colors from 'tailwindcss/colors';
@@ -15,6 +16,7 @@ const minimumSummaryDatesDizes = 18 * 5;
 const amountOfDaysToFill = minimumSummaryDatesDizes - datesFromYearStart.length;
 
 export function Home() {
+  const { navigate } = useNavigation();
   return (
     <View className="flex-1 bg-background px-8 pt-16">
       <Header />
@@ -42,6 +44,7 @@ export function Home() {
             datesFromYearStart.map(date => (
               <ProcedureDay
                 key={date.toString()}
+                onPress={() => navigate('procedure', { date: date.toISOString() })}
               />
             ))
           }

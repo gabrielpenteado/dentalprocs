@@ -38,8 +38,8 @@ export function New() {
         </Text>
 
         <TextInput
-          className="h-12 pl-4 rounded-lg mt-3 bg-zinc-800 text-white focus:border-2
-           focus:border-teal-600"
+          className="h-12 pl-4 rounded-lg mt-3 bg-zinc-900 text-white border-2 border-zinc-800
+           focus:border-teal-500"
           placeholder="Fillings, Root canal, etc..."
           placeholderTextColor={colors.zinc[500]}
         />
