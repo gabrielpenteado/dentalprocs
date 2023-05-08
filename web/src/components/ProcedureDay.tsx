@@ -1,6 +1,8 @@
 import * as Popover from '@radix-ui/react-popover';
 import * as Checkbox from '@radix-ui/react-checkbox';
 
+import { Tooth } from "@phosphor-icons/react";
+
 import { ProgressBar } from './ProgressBar';
 import clsx from 'clsx';
 import { Check } from 'phosphor-react';
@@ -16,15 +18,21 @@ export function ProcedureDay(props: ProcedureDayProps) {
   return (
     <Popover.Root>
       <Popover.Trigger>
-        <i
-          className={clsx('fas fa-tooth text-zinc-800 text-center text-toothIcon', {
-            'text-teal-800': completedPercentage > 0 && completedPercentage < 20,
-            'text-teal-700': completedPercentage >= 20 && completedPercentage < 40,
-            'text-teal-600': completedPercentage >= 40 && completedPercentage < 60,
-            'text-teal-500': completedPercentage >= 60 && completedPercentage < 80,
-            'text-teal-400': completedPercentage >= 80,
+
+        <Tooth
+          alt="tooth icon"
+          size="2.5rem"
+          weight="fill"
+          color={clsx('', {
+            '#27272A': completedPercentage == 0,
+            '#03302d': completedPercentage > 0 && completedPercentage < 20,
+            '#065f5b': completedPercentage >= 20 && completedPercentage < 40,
+            '#088f88': completedPercentage >= 40 && completedPercentage < 60,
+            '#0bbeb6': completedPercentage >= 60 && completedPercentage < 80,
+            '#0eeee3': completedPercentage >= 80
           })}
         />
+
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Content className="min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col">
@@ -46,7 +54,7 @@ export function ProcedureDay(props: ProcedureDayProps) {
               </div>
 
               <span className='font-semibold text-xl text-white leading-tight group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400'>
-                test
+                Test
               </span>
 
             </Checkbox.Root>
