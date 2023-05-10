@@ -1,22 +1,64 @@
-import { View, Text, ScrollView } from "react-native";
+import { useState, useEffect } from "react";
+import { View, Text, ScrollView, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import dayjs from "dayjs";
 
 import { FontAwesome5 } from '@expo/vector-icons';
 import colors from 'tailwindcss/colors';
 
+import { api } from "../lib/axios";
 import { generateDatesFromYearBeginning } from "../utils/generate-dates-from-year-beginning";
 
 
 import { Header } from "../components/Header";
+import { Loading } from "../components/Loading";
 import { ProcedureDay, DaySize } from "../components/ProcedureDay";
 
 const weekDays = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
 const datesFromYearStart = generateDatesFromYearBeginning();
-const minimumSummaryDatesDizes = 18 * 5;
-const amountOfDaysToFill = minimumSummaryDatesDizes - datesFromYearStart.length;
+const minimumSummaryDatesSizes = 21 * 7;
+const amountOfDaysToFill = minimumSummaryDatesSizes - datesFromYearStart.length;
+
+type SummaryProps = {
+  id: string;
+  date: string;
+  amount: number;
+  completed: number;
+}[]
 
 export function Home() {
+  const [loading, setLoading] = useState(true);
+  const [summary, setSummary] = useState<SummaryProps | null>(null);
+
   const { navigate } = useNavigation();
+
+  async function fetchData() {
+    try {
+      setLoading(true);
+      const response = await api.get('/summary')
+      setSummary(response.data);
+      // console.log(response.data);
+
+
+    } catch (error) {
+      Alert.alert('!', 'Procedures summary could not be loaded.');
+      console.log(error);
+
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+
+  if (loading) {
+    return (
+      <Loading />
+    )
+  }
+
   return (
     <View className="flex-1 bg-background px-8 pt-16">
       <Header />
@@ -39,29 +81,43 @@ export function Home() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 100 }}
       >
-        <View className="flex-row flex-wrap" >
-          {
-            datesFromYearStart.map(date => (
-              <ProcedureDay
-                key={date.toString()}
-                onPress={() => navigate('procedure', { date: date.toISOString() })}
-              />
-            ))
-          }
-          {
-            amountOfDaysToFill > 0 && Array
-              .from({ length: amountOfDaysToFill })
-              .map((_, index) => (
-                <FontAwesome5
-                  name="tooth"
-                  color={colors.zinc[900]}
-                  size={DaySize + 7}
-                  margin={3}
-                  key={index}
-                />
-              ))
-          }
-        </View>
+
+        {
+          summary &&
+          <View className="flex-row flex-wrap" >
+            {
+              datesFromYearStart.map(date => {
+                const dayWithProcedures = summary.find(day => {
+                  return dayjs(date).isSame(day.date, "day")
+                })
+
+                return (
+                  <ProcedureDay
+                    key={date.toString()}
+                    date={date}
+                    amountOfProcedures={dayWithProcedures?.amount}
+                    amountCompleted={dayWithProcedures?.completed}
+                    onPress={() => navigate('procedure', { date: date.toISOString() })}
+                  />
+                )
+              })
+            }
+
+            {
+              amountOfDaysToFill > 0 && Array
+                .from({ length: amountOfDaysToFill })
+                .map((_, index) => (
+                  <FontAwesome5
+                    key={index}
+                    name="tooth"
+                    color={colors.zinc[900]}
+                    size={DaySize + 7}
+                    margin={3}
+                  />
+                ))
+            }
+          </View>
+        }
       </ScrollView>
 
     </View>
