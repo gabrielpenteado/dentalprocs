@@ -1,15 +1,17 @@
-import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text, TextInput, TouchableOpacity, View, Alert } from "react-native";
 import { BackButton } from "../components/BackButton";
 import { Feather } from '@expo/vector-icons';
 import colors from "tailwindcss/colors";
 
 import { Checkbox } from "../components/Checkbox";
 import { useState } from "react";
+import { api } from "../lib/axios";
 
 const availableWeekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
   'Friday', 'Saturday'];
 
 export function New() {
+  const [title, setTitle] = useState('');
   const [weekDays, setWeekDays] = useState<number[]>([]);
 
   function handleToggleWeekDay(weekDayIndex: number) {
@@ -17,6 +19,24 @@ export function New() {
       setWeekDays(prevState => prevState.filter(weekDay => weekDay !== weekDayIndex));
     } else {
       setWeekDays(prevState => [...prevState, weekDayIndex]);
+    }
+  }
+
+  async function handleCreateNewProcedure() {
+    try {
+      if (!title.trim() || weekDays.length === 0) {
+        Alert.alert('New Procedure', 'Type a new procedure and select at least one day.')
+      }
+      await api.post('/procedures', { title, weekDays });
+
+      setTitle('');
+      setWeekDays([]);
+
+      Alert.alert('Success!', 'New procedure created!')
+
+    } catch (error) {
+      console.log(error);
+      Alert.alert('Error', 'Could not create a new procedure.')
     }
   }
 
@@ -42,6 +62,8 @@ export function New() {
            focus:border-teal-500"
           placeholder="Fillings, Root canal, etc..."
           placeholderTextColor={colors.zinc[500]}
+          onChangeText={setTitle}
+          value={title}
         />
 
         <Text className="font-semibold mt-4 mb-3 text-white text-base">
@@ -62,6 +84,7 @@ export function New() {
         <TouchableOpacity
           className="w-full h-14 flex-row items-center justify-center bg-teal-600 rounded-md mt-6"
           activeOpacity={0.7}
+          onPress={handleCreateNewProcedure}
         >
           <Feather
             name="check"

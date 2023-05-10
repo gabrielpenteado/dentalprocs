@@ -39,9 +39,8 @@ export function Home() {
       setSummary(response.data);
       // console.log(response.data);
 
-
     } catch (error) {
-      Alert.alert('!', 'Procedures summary could not be loaded.');
+      Alert.alert('Error', 'Procedures summary could not be loaded.');
       console.log(error);
 
     } finally {
