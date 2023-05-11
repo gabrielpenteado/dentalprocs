@@ -62,17 +62,17 @@ export async function appRoutes(app: FastifyInstance) {
       }
     })
 
-    const completeProcedures = day?.dayProcedures.map(dayProcedure => {
+    const completedProcedures = day?.dayProcedures.map(dayProcedure => {
       return dayProcedure.procedure_id;
-    })
+    }) ?? []
 
     return {
       possibleProcedures,
-      completeProcedures,
+      completedProcedures,
     }
   })
 
-  // complete / not complete a procedure
+  // completed / not completed a procedure
   app.patch('/procedures/:id/toggle', async (req) => {
     const toggleProcedureParams = z.object({
       id: z.string().uuid(),

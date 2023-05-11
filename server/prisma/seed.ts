@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient()
 
@@ -69,13 +69,13 @@ async function run() {
 
   await Promise.all([
     /**
-     * Procedures (Complete/Available): 1/1
+     * Procedures (Completed/Available): 1/1
      */
     prisma.day.create({
       data: {
         /** Monday */
         date: new Date('2023-01-02T03:00:00.000z'),
-        DayProcedures: {
+        dayProcedures: {
           create: {
             procedure_id: firstProcedureId,
           }
@@ -84,13 +84,13 @@ async function run() {
     }),
 
     /**
-     * Habits (Complete/Available): 1/1
+     * Procedures (Completed/Available): 1/1
      */
     prisma.day.create({
       data: {
         /** Friday */
         date: new Date('2023-01-06T03:00:00.000z'),
-        DayProcedures: {
+        dayProcedures: {
           create: {
             procedure_id: firstProcedureId,
           }
@@ -99,13 +99,13 @@ async function run() {
     }),
 
     /**
-     * Procedures (Complete/Available): 2/2
+     * Procedures (Completed/Available): 2/2
      */
     prisma.day.create({
       data: {
         /** Wednesday */
         date: new Date('2023-01-04T03:00:00.000z'),
-        DayProcedures: {
+        dayProcedures: {
           create: [
             { procedure_id: firstProcedureId },
             { procedure_id: secondProcedureId },

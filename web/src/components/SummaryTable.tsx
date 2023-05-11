@@ -13,7 +13,7 @@ const summaryDates = generateDatesFromYearBeginning();
 
 const minimunSummaryDatesSize = 21 * 7 // 21 weeks or 18 * 7 = 18 weeks
 const amountOfDaysToFill = minimunSummaryDatesSize - summaryDates.length;
-console.log(amountOfDaysToFill);
+// console.log(amountOfDaysToFill);
 
 type Summary = {
   id: string;
@@ -47,7 +47,7 @@ export function SummaryTable() {
       </div>
 
       <div className="grid grid-rows-7 grid-flow-col gap-3">
-        {summaryDates.map(date => {
+        {summary.length > 0 && summaryDates.map(date => {
           const dayInSummary = summary.find(day => {
             return dayjs(date).isSame(day.date, 'day')
           })
@@ -57,7 +57,7 @@ export function SummaryTable() {
               key={date.toString()}
               date={date}
               amount={dayInSummary?.amount}
-              completed={dayInSummary?.completed}
+              defaultCompleted={dayInSummary?.completed}
             />)
 
           // return (
@@ -75,7 +75,7 @@ export function SummaryTable() {
         {amountOfDaysToFill > 0 && Array.from({ length: amountOfDaysToFill }).map((_, index) => {
           return (
 
-            <div className="cursor-not-allowed pointer-events-none">
+            <div key={index} className="cursor-not-allowed pointer-events-none">
               <Tooth
                 alt="tooth icon"
                 size="2.5rem"
