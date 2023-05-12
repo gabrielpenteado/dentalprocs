@@ -11,7 +11,7 @@ const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 
 const summaryDates = generateDatesFromYearBeginning();
 
-const minimunSummaryDatesSize = 21 * 7 // 21 weeks or 18 * 7 = 18 weeks
+const minimunSummaryDatesSize = 18 * 7 // 18 weeks or 21 * 7 = 21 weeks
 const amountOfDaysToFill = minimunSummaryDatesSize - summaryDates.length;
 // console.log(amountOfDaysToFill);
 

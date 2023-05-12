@@ -10,7 +10,7 @@ export function ProgressBar(props: ProgressBarProps) {
         role="progressbar"
         aria-label="Completed procedures progress bar"
         aria-valuenow={props.progress}
-        className='h-3 rounded-xl bg-teal-500'
+        className='h-3 rounded-xl bg-teal-500 transition-all'
         style={{
           width: `${props.progress}%`
         }}

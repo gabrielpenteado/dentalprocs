@@ -120,8 +120,6 @@ export async function appRoutes(app: FastifyInstance) {
       })
     }
 
-
-
   })
 
   app.get('/summary', async () => {
@@ -155,7 +153,6 @@ export async function appRoutes(app: FastifyInstance) {
 
     return summary;
   })
-
 
 }
 

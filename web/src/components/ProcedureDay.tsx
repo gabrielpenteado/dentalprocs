@@ -30,7 +30,7 @@ export function ProcedureDay({ defaultCompleted = 0, amount = 0, date }: Procedu
 
   return (
     <Popover.Root>
-      <Popover.Trigger>
+      <Popover.Trigger className='transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-background'>
 
         <Tooth
           alt="tooth icon"
@@ -45,6 +45,7 @@ export function ProcedureDay({ defaultCompleted = 0, amount = 0, date }: Procedu
             '#0eeee3': completedPercentage >= 80
           })}
         />
+
 
       </Popover.Trigger>
       <Popover.Portal>
