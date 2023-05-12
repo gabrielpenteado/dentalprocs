@@ -33,14 +33,13 @@ export function ProcedureDay({ amountOfProcedures = 0, amountCompleted = 0, date
       <FontAwesome5
         name="tooth"
         color={clsx('', {
-          '#27272A': amountAccomplishedPercentage == 0 && !isCurrentDay,
+          '#fafafa': isCurrentDay && amountAccomplishedPercentage == 0,
+          '#27272A': !isCurrentDay && amountAccomplishedPercentage == 0,
           '#03302d': amountAccomplishedPercentage > 0 && amountAccomplishedPercentage < 20,
           '#065f5b': amountAccomplishedPercentage >= 20 && amountAccomplishedPercentage < 40,
           '#088f88': amountAccomplishedPercentage >= 40 && amountAccomplishedPercentage < 60,
           '#0bbeb6': amountAccomplishedPercentage >= 60 && amountAccomplishedPercentage < 80,
-          '#0eeee3': amountAccomplishedPercentage >= 80,
-          '#fafafa': isCurrentDay
-
+          '#0eeee3': amountAccomplishedPercentage >= 80
         })}
         size={DaySize + 7}
         margin={3}

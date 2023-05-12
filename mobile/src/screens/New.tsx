@@ -25,7 +25,7 @@ export function New() {
   async function handleCreateNewProcedure() {
     try {
       if (!title.trim() || weekDays.length === 0) {
-        Alert.alert('New Procedure', 'Type a new procedure and select at least one day.')
+        return Alert.alert('New Procedure', 'Type a new procedure and select at least one day.')
       }
       await api.post('/procedures', { title, weekDays });
 
