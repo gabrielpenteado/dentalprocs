@@ -98,6 +98,14 @@ export function Home() {
                     amountCompleted={dayWithProcedures?.completed}
                     onPress={() => navigate('procedure', { date: date.toISOString() })}
                   />
+
+                  // <ProcedureDay
+                  //   key={date.toString()}
+                  //   date={date}
+                  //   amountOfProcedures={5}
+                  //   amountCompleted={Math.round(Math.random() * 5)}
+                  // />
+                  // This return code is for populate all days and have a visual knowledge of the app.
                 )
               })
             }
