@@ -3,6 +3,10 @@ import { Check } from "phosphor-react";
 import * as Checkbox from '@radix-ui/react-checkbox';
 import { api } from "../lib/axios";
 
+//toast
+import { Slide, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const availableWeekDays = [
   'Sunday',
   'Monday',
@@ -32,7 +36,18 @@ export function NewProcedureForm() {
     setTitle('');
     setWeekDays([]);
 
-    alert('Procedure created !');
+    // alert('Procedure created !');
+    toast.success('Procedure created!', {
+      position: "top-center",
+      autoClose: 2000,
+      transition: Slide,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   }
 
   function handleToggleWeekDay(weekDay: number) {

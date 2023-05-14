@@ -24,6 +24,9 @@ export function ProcedureDay({ defaultCompleted = 0, amount = 0, date }: Procedu
   const dayAndMonth = dayjs(date).format('MM/DD');
   const dayOfWeek = dayjs(date).format('dddd');
 
+  const today = dayjs().startOf('day').toDate();
+  const isCurrentDay = dayjs(date).isSame(today);
+
   function handleCompletedChanged(completed: number) {
     setCompleted(completed);
   }
@@ -37,7 +40,8 @@ export function ProcedureDay({ defaultCompleted = 0, amount = 0, date }: Procedu
           size="2.5rem"
           weight="fill"
           color={clsx('', {
-            '#27272A': completedPercentage == 0,
+            '#fafafa': isCurrentDay && completedPercentage == 0,
+            '#27272A': !isCurrentDay && completedPercentage == 0,
             '#03302d': completedPercentage > 0 && completedPercentage < 20,
             '#065f5b': completedPercentage >= 20 && completedPercentage < 40,
             '#088f88': completedPercentage >= 40 && completedPercentage < 60,

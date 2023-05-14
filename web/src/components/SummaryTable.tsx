@@ -11,7 +11,7 @@ const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 
 const summaryDates = generateDatesFromYearBeginning();
 
-const minimunSummaryDatesSize = 18 * 7 // 18 weeks or 21 * 7 = 21 weeks
+const minimunSummaryDatesSize = 24 * 7 // 18 weeks or 21 * 7 = 21 weeks
 const amountOfDaysToFill = minimunSummaryDatesSize - summaryDates.length;
 // console.log(amountOfDaysToFill);
 
@@ -65,7 +65,7 @@ export function SummaryTable() {
           //     key={date.toString()}
           //     date={date}
           //     amount={5}
-          //     completed={Math.round(Math.random() * 5)}
+          //     defaultCompleted={Math.round(Math.random() * 5)}
           //   />
           // )
           // This return code is for populate all days and have a visual knowledge of the app.
