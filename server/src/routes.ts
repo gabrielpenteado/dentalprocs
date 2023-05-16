@@ -154,5 +154,17 @@ export async function appRoutes(app: FastifyInstance) {
     return summary;
   })
 
+
+  app.get('/chart', async () => {
+    const chartAllProceduresCompleted = await prisma.$queryRaw`
+      SELECT title, cast(COUNT (*) as float) AS total
+      FROM day_procedures
+      JOIN procedures
+      ON day_procedures.procedure_id = procedures.id
+      GROUP BY title;
+    `
+    return chartAllProceduresCompleted;
+  })
+
 }
 

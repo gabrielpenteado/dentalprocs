@@ -3,6 +3,7 @@ import { Check } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 import { api } from '../lib/axios';
 import dayjs from 'dayjs';
+import clsx from 'clsx';
 
 interface ProceduresListProps {
   date: Date;
@@ -81,15 +82,23 @@ export function ProceduresList({ date, onCompletedChanged }: ProceduresListProps
               </Checkbox.CheckboxIndicator>
             </div>
 
-            <span className='font-semibold text-xl text-white leading-tight 
+            {/* <span className='font-semibold text-xl text-white leading-tight 
                 group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400'>
+              {procedure.title}
+            </span> */}
+
+            <span className={clsx("font-semibold text-xl text-white leading-tight",
+              "group-data-[state = checked]:line-through group-data-[state=checked]:text-zinc-400", {
+              "text-zinc-400": isDateInPast
+            })}
+            >
               {procedure.title}
             </span>
           </Checkbox.Root>
         )
       })}
 
-    </div>
+    </div >
   )
 }
 

@@ -31,7 +31,6 @@ export function SummaryTable() {
     })
   }, []) // this empty array make the function inside the useEffect execute only one time(the first time that the component render)
 
-
   return (
     <div className="w-full flex justify-center">
       <div className="grid grid-rows-7 grid-flow-row gap-3">
@@ -64,8 +63,8 @@ export function SummaryTable() {
           //   <ProcedureDay
           //     key={date.toString()}
           //     date={date}
-          //     amount={5}
-          //     defaultCompleted={Math.round(Math.random() * 5)}
+          //     amount={4}
+          //     defaultCompleted={Math.round(Math.random() * 4)}
           //   />
           // )
           // This return code is for populate all days and have a visual knowledge of the app.
