@@ -3,6 +3,7 @@ export declare global {
     interface RootParamList {
       home: undefined;
       new: undefined;
+      chart: undefined;
       procedure: {
         date: string;
       }

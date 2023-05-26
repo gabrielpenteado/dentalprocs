@@ -6,6 +6,7 @@ const { Navigator, Screen } = createNativeStackNavigator();
 import { Home } from '../screens/Home';
 import { New } from '../screens/New';
 import { Procedure } from '../screens/Procedure';
+import { Chart } from '../screens/Chart';
 
 export function AppRoutes() {
   return (
@@ -21,9 +22,15 @@ export function AppRoutes() {
       />
 
       <Screen
+        name="chart"
+        component={Chart}
+      />
+
+      <Screen
         name="procedure"
         component={Procedure}
       />
+
     </Navigator>
   );
 }
