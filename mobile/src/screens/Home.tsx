@@ -16,7 +16,7 @@ import { ProcedureDay, DaySize } from "../components/ProcedureDay";
 
 const weekDays = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
 const datesFromYearStart = generateDatesFromYearBeginning();
-const minimumSummaryDatesSizes = 24 * 7; // days to show on screen 18 * 7 or 21 * 7 or 24 * 7
+const minimumSummaryDatesSizes = 52 * 7; // days to show on screen 18 * 7 or 21 * 7 or 24 * 7
 const amountOfDaysToFill = minimumSummaryDatesSizes - datesFromYearStart.length;
 
 type SummaryProps = {
