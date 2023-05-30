@@ -11,7 +11,7 @@ const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 
 const summaryDates = generateDatesFromYearBeginning();
 
-const minimunSummaryDatesSize = 24 * 7 // 18 weeks or 21 * 7 = 21 weeks
+const minimunSummaryDatesSize = 52 * 7 // 2418 weeks or 24 * 7 = 24 weeks
 const amountOfDaysToFill = minimunSummaryDatesSize - summaryDates.length;
 // console.log(amountOfDaysToFill);
 
@@ -33,7 +33,7 @@ export function SummaryTable() {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="grid grid-rows-7 grid-flow-row gap-3">
+      <div className="grid grid-rows-7 grid-flow-row gap-2 pt-3 pb-4">
         {weekDays.map((weekDay, index) => {
           return (
             <div
@@ -45,7 +45,9 @@ export function SummaryTable() {
         })}
       </div>
 
-      <div className="grid grid-rows-7 grid-flow-col gap-3">
+      <div className="grid grid-rows-7 grid-flow-col gap-3 overflow-x-scroll scrollbar-thin
+         scrollbar-thumb-teal-600 hover:scrollbar-thumb-teal-400 scrollbar-track-zinc-600
+          scrollbar-thumb-rounded scrollbar-track-rounded pb-3 pt-3">
         {summary.length > 0 && summaryDates.map(date => {
           const dayInSummary = summary.find(day => {
             return dayjs(date).isSame(day.date, 'day')
