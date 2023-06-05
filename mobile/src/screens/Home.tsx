@@ -14,9 +14,9 @@ import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import { ProcedureDay, DaySize } from "../components/ProcedureDay";
 
-const weekDays = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
+const weekDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 const datesFromYearStart = generateDatesFromYearBeginning();
-const minimumSummaryDatesSizes = 24 * 7; // days to show on screen 18 * 7 or 21 * 7 or 24 * 7
+const minimumSummaryDatesSizes = 52 * 7; // days to show on screen 18 * 7 or 21 * 7 or 24 * 7
 const amountOfDaysToFill = minimumSummaryDatesSizes - datesFromYearStart.length;
 
 type SummaryProps = {
@@ -102,8 +102,8 @@ export function Home() {
                   // <ProcedureDay
                   //   key={date.toString()}
                   //   date={date}
-                  //   amountOfProcedures={5}
-                  //   amountCompleted={Math.round(Math.random() * 5)}
+                  //   amountOfProcedures={4}
+                  //   amountCompleted={Math.round(Math.random() * 4)}
                   // />
                   // This return code is for populate all days and have a visual knowledge of the app.
                 )

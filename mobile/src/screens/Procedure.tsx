@@ -36,7 +36,7 @@ export function Procedure() {
   const parsedDate = dayjs(date);
   const isDateInPast = parsedDate.endOf('day').isBefore(new Date());
   const dayOfWeek = parsedDate.format('dddd');
-  const dayAndMonth = parsedDate.format('DD/MM');
+  const dayAndMonth = parsedDate.format('MM/DD');
 
   const proceduresProgress = dayInfo?.possibleProcedures.length
     ? generateProgressPercentage(dayInfo.possibleProcedures.length, completedProcedures.length)
@@ -93,7 +93,7 @@ export function Procedure() {
       >
         <BackButton />
 
-        <Text className="mt-6 text-zinc-400 font-semibold text-base lowercase">
+        <Text className="mt-6 text-zinc-400 font-semibold text-base">
           {dayOfWeek}
         </Text>
 
