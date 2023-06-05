@@ -7,7 +7,7 @@ import { ProcedureDay } from "./ProcedureDay";
 import { Tooth } from "@phosphor-icons/react";
 import dayjs from "dayjs";
 
-const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
+const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
 const summaryDates = generateDatesFromYearBeginning();
 
@@ -33,7 +33,7 @@ export function SummaryTable() {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="grid grid-rows-7 grid-flow-row gap-2 pt-3 pb-4">
+      <div className="grid grid-rows-7 grid-flow-row gap-2 pt-3 pb-4 pr-2">
         {weekDays.map((weekDay, index) => {
           return (
             <div
@@ -47,7 +47,7 @@ export function SummaryTable() {
 
       <div className="grid grid-rows-7 grid-flow-col gap-3 overflow-x-scroll scrollbar-thin
          scrollbar-thumb-teal-600 hover:scrollbar-thumb-teal-400 scrollbar-track-zinc-600
-          scrollbar-thumb-rounded scrollbar-track-rounded pb-3 pt-3">
+          scrollbar-thumb-rounded scrollbar-track-rounded pb-3 pt-3 pl-1">
         {summary.length > 0 && summaryDates.map(date => {
           const dayInSummary = summary.find(day => {
             return dayjs(date).isSame(day.date, 'day')
