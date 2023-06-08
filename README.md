@@ -1,9 +1,12 @@
-<h1 align="center">
-   <strong>Dental Procs</strong>
-</h1>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/logo.svg">
+  <h1 align="center">
+    <strong>Dental Procs</strong>
+  </h1>
+</div>
 
 <h2 align="center">
-  A application designed for dentists to monitor the most performed procedures.
+  An application designed for dentists to monitor the most performed procedures.
 </h2>
 
 <div align="center">
@@ -43,7 +46,45 @@ The app permit dentists to create new procedures, associating them with specific
  and provides a comprehensive chart that offers an overview of procedure frequency.
 </p>
 
+<div align="center">
+  <p>A short video presentation</p>
+  <a href="https://www.youtube.com/watch?v=0X3PRdZceBo">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+  </a>
+</div>
+<br>
+
 ## Web version
+
+<!-- <table>
+  <tr>
+    <th colspan=3><img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/dev/web/public/assets/web1.jpg"></th>
+  </tr>
+  <tr>
+    <td>
+     <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/dev/web/public/assets/web2.jpg">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/dev/web/public/assets/web3.jpg">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/dev/web/public/assets/web4.jpg">
+    </td>
+  </tr>
+</table>
+<br> -->
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web1.jpg">
+</div>
+<br>
+<br>
+<p align="center" width="100%">
+    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web2.jpg"> 
+    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web3.jpg"> 
+    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web4.jpg"> 
+</p>
+<br>
 
 ### Build with
 ![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
@@ -110,7 +151,7 @@ MyDearPage automatically adjust for different screen sizes ensuring a pleasant u
 The foundation of the open source community are the contributions, them inspire us to learn and create. Any contributions are greatly appreciated.
 
 ## 📄 License
-This project is licensed under the MIT License. See the [LICENSE.md](https://github.com/gabrielpenteado/mydearpage/blob/main/LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE.md](https://github.com/gabrielpenteado/dentalprocs/blob/main/LICENSE.md) file for details.
 <br>
 <br>
 
