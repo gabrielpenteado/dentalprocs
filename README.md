@@ -26,19 +26,19 @@
   - Requirements
   - Installation
   - Website
-- [Mobile version](#-mobile-version)
+- [Mobile version](#mobile-version)
   - Built with
   - Requirements
   - Instalattion
-- [Server](#-server)
+- [Server](#server)
   - Built with
   - Requirements
   - Instalattion
 - [Contributions](#-contributions)
-- [License](#-license)
+- [License](#license)
 <br>
 
-## 💡 About the project
+## 🦷 About the project
 <p align="justify">
 Introducing <strong>Dental Procs</strong>, a specialized application designed for dentists to monitor 
  the most performed procedures in their clinics and track performance trends over time. 
@@ -47,15 +47,62 @@ The app permit dentists to create new procedures, associating them with specific
 </p>
 
 <div align="center">
-  <p>A short video presentation</p>
-  <a href="https://www.youtube.com/watch?v=0X3PRdZceBo">
-    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
-  </a>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">
+          Video
+        </th>
+        <th style="text-align: center">
+          Website
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a href="https://www.youtube.com/watch?v=0X3PRdZceBo">
+            <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+          </a>
+        </td>  
+        <td>
+          <a href="https://dentalprocs.onrender.com">
+            <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" />
+          </a>
+        </td>  
+      </tr>
+    </tbody>
+  </table>
 </div>
+
+<!-- <div align="center">
+
+  | Video  | Website |
+  |:------:|:-------:|
+  | [![Youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=0X3PRdZceBo) | [![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://dentalprocs.onrender.com)|
+
+</div> -->
+
 <br>
 
-## Web version
+## 🖥️ Web version
+<div align="center">
+  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web1.jpg">
 
+  ---
+
+  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web2.jpg">
+
+  ---
+
+  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web3.jpg">
+
+  ---
+  
+  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web4.jpg">
+</div>
+<br>
+<br>
 <!-- <table>
   <tr>
     <th colspan=3><img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/dev/web/public/assets/web1.jpg"></th>
@@ -71,20 +118,14 @@ The app permit dentists to create new procedures, associating them with specific
       <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/dev/web/public/assets/web4.jpg">
     </td>
   </tr>
-</table>
-<br> -->
+</table> -->
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web1.jpg">
-</div>
-<br>
-<br>
-<p align="center" width="100%">
+<!-- <p align="center" width="100%">
     <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web2.jpg"> 
     <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web3.jpg"> 
     <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web4.jpg"> 
-</p>
-<br>
+</p> -->
+---
 
 ### Build with
 ![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
@@ -103,18 +144,18 @@ The app permit dentists to create new procedures, associating them with specific
 - [phosphor-icons](https://phosphoricons.com/)
 
 ### Instalattion
-
-1. Clone the repository<br>
+1. Clone the repository.<br>
 `git clone https://github.com/gabrielpenteado/dentalprocs`
 
-2. Access the ***web*** folder in the terminal
+2. Install the [***server***](#-server) and run it.
 
-3. Install all packages dependencies<br> 
+3. Access the ***web*** folder in the terminal.
+
+4. Install all packages dependencies.<br> 
 `npm install`
 
-4. Start using<br>
+5. Start using.<br>
 `npm run dev`
-<br>
 
 ### Browser Support
 [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png" alt="Chrome" />](https://www.google.com/intl/en/chrome/)<br> Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_24x24.png" alt="Edge" />](https://www.microsoft.com/en-us/edge)<br> Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_24x24.png" alt="Firefox" />](https://www.mozilla.org/en-US/firefox/new/)<br> Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_24x24.png" alt="Safari" />](https://www.apple.com/br/safari/)<br> Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_24x24.png" alt="Opera" />](https://www.opera.com)<br> Opera 
@@ -122,28 +163,74 @@ The app permit dentists to create new procedures, associating them with specific
 |      ✅      |      ✅      |     ✅      |      ✅      |      ✅      |
 | last version | last version | last version | last version | last version |
 
+<br>
 
-### Website 
-You can access the project website with all features by clicking below:
-
-[![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://dentalprocs.onrender.com)
-
-<!-- [![Website shields.io](https://img.shields.io/website?down_color=red&down_message=OFF&style=for-the-badge&up_color=green&up_message=ON&url=https%3A%2F%2Fmydearpage.onrender.com)](https://dentalprocs.onrender.com) -->
+## 📱 Mobile version
+<div align="center">
+  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/mobile//assets/mobile.jpg">
+</div>
 <br>
 <br>
 
+---
 
+### Build with
+![expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
+![react-native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
+### Requirements
+- npm (^9.5.0)
+- react-native (0.71.8)
+- [expo](https://docs.expo.dev/) (~48.0.10)
+- [nativewind](https://www.nativewind.dev/)
+- [dayjs](https://day.js.org/docs/en/installation/installation)
+- [victory-native](https://formidable.com/open-source/victory/docs/native/)
 
+### Instalattion
+1. Clone the repository.<br>
+`git clone https://github.com/gabrielpenteado/dentalprocs`
 
+2. Install the [***server***](#-server) and run it.
 
+3. Access the ***mobile*** folder in the terminal.
 
-## ⚡ Features
+4. Install all packages dependencies.<br> 
+`npm install`
 
-
-### Responsive web design
-MyDearPage automatically adjust for different screen sizes ensuring a pleasant user experience for all devices.
+5. Start with expo.<br>
+`npx expo start`
 <br>
+
+## 📡 Server
+
+### Build with
+![fastify](https://img.shields.io/badge/fastify-202020?style=for-the-badge&logo=fastify&logoColor=white)
+![prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![sqlite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+
+*Note: You can find the server integrated with other databases such as MySQL and PostgreSQL in this [repository](https://github.com/gabrielpenteado/dentalprocs-server).* 
+
+### Requirements
+- npm (^9.5.0)
+- [fastify](https://www.fastify.io/)
+- [prisma](https://www.prisma.io/docs/getting-started/quickstart)
+- [dayjs](https://day.js.org/docs/en/installation/installation)
+- [zod](https://zod.dev/)
+
+### Instalattion
+1. Clone the repository.<br>
+`git clone https://github.com/gabrielpenteado/dentalprocs`
+
+2. Access the ***server*** folder in the terminal.
+
+3. Install all packages dependencies.<br> 
+`npm install`
+
+4. Run server.<br>
+`npm run dev`
 <br>
 
 ## 🤝 Contributions
