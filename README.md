@@ -210,8 +210,9 @@ The app permit dentists to create new procedures, associating them with specific
 ![prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
 ![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![sqlite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-*Note: You can find the server integrated with other databases such as MySQL and PostgreSQL in this [repository](https://github.com/gabrielpenteado/dentalprocs-server).* 
+*Note: You can find the server integrated with other databases such as ![mysql](https://img.shields.io/badge/MySQL-005C84?style=flat-square&logo=mysql&logoColor=white) and ![postgresql](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white) in [dentalprocs-server](https://github.com/gabrielpenteado/dentalprocs-server) repository.* 
 
 ### Requirements
 - npm (^9.5.0)
@@ -219,6 +220,7 @@ The app permit dentists to create new procedures, associating them with specific
 - [prisma](https://www.prisma.io/docs/getting-started/quickstart)
 - [dayjs](https://day.js.org/docs/en/installation/installation)
 - [zod](https://zod.dev/)
+- [node.js](https://nodejs.org/en) (v18.15.0)
 
 ### Instalattion
 1. Clone the repository.<br>
