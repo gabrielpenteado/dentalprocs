@@ -42,7 +42,12 @@ export function Chart() {
 
       const totalProcsArray = response.data.map((proc: proceduresTotal) => proc.total)
       // console.log(totalProcsArray);
-      setProcsTotal(totalProcsArray);
+
+      // Convert array of strings to array of numbers
+      const totalProcsNumbersArray = totalProcsArray.map((proc: string) => parseInt(proc))
+      // console.log(totalProcsNumbersArray);
+
+      setProcsTotal(totalProcsNumbersArray);
 
     } catch (error) {
       Alert.alert('Error', 'Procedures chart could not be loaded.');
