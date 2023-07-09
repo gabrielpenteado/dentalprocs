@@ -75,6 +75,8 @@ The app permit dentists to create new procedures, associating them with specific
   </table>
 </div>
 
+*Website: Render web services have a delay of about 30 seconds in the response of the first request after a period of inactivity while the instance spins up.*
+
 <!-- <div align="center">
 
   | Video  | Website |
