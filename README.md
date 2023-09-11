@@ -35,7 +35,7 @@
   - Instalattion
 - [Contributions](#-contributions)
 - [License](#license)
-<br>
+
 
 ## 🦷 About the project
 <p align="justify">
@@ -84,26 +84,33 @@ The app permit dentists to create new procedures, associating them with specific
 
 </div> -->
 
-<br>
-
 ## 🖥️ Web version
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/dentalprocs.png">
+</p>
+
 <div align="center">
-  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web1.jpg">
-
-  ---
-
-  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web2.jpg">
-
-  ---
-
-  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web3.jpg">
-
-  ---
-  
-  <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web4.jpg">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web1.jpg">Screenshot-1</a>
+        </th>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web2.jpg">Screenshot-2</a>
+        </th>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web3.jpg">Screenshot-3</a>
+        </th>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web4.jpg">Screenshot-4</a>
+        </th>   
+      </tr>
+    </thead>
+  </table>
 </div>
-<br>
-<br>
+
 <!-- <table>
   <tr>
     <th colspan=3><img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/dev/web/public/assets/web1.jpg"></th>
@@ -170,8 +177,6 @@ The app permit dentists to create new procedures, associating them with specific
 <div align="center">
   <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/mobile//assets/mobile.jpg">
 </div>
-<br>
-<br>
 
 ---
 
