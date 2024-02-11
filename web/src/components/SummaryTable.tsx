@@ -12,7 +12,8 @@ const weekDays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 
 const summaryDates = generateDatesFromYearBeginning();
 
-const minimunSummaryDatesSize = 366; // 52 * 7 or 24 * 7 = 24 weeks // 365 or 366 days in the current year.
+const minimunSummaryDatesSize = 366; // 52 * 7 or 24 * 7 = 24 weeks 
+// use 365 or 366 - total days of the current year
 const amountOfDaysToFill = minimunSummaryDatesSize - summaryDates.length;
 // console.log(amountOfDaysToFill);
 
