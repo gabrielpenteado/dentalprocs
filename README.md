@@ -10,16 +10,15 @@
 </h2>
 
 <div align="center">
-  <a href="https://github.com/gabrielpenteado/dentalprocs/blob/main/LICENSE.md">
-    <img src="https://img.shields.io/github/license/gabrielpenteado/mydearpage?color=informational&style=flat-square" alt="license"/>
-  </a>
-
+  <img src="https://img.shields.io/github/license/gabrielpenteado/mydearpage?color=informational&style=flat-square" alt="license"/>
+  
   <img src="https://img.shields.io/static/v1?label=npm&message=v9.5.0&color=informational&style=flat-square" alt="npm version">
 
   <img src="https://img.shields.io/website?down_color=red&down_message=offline&style=flat-square&up_color=008000&up_message=online&url=https%3A%2F%2Fdentalprocs.onrender.com" alt="website status">
 </div>
 
-## 📑 Contents 
+## 📑 Contents
+
 - [About the project](#-about-the-project)
 - [Web version](#-web-version)
   - Built with
@@ -36,8 +35,8 @@
 - [Contributions](#-contributions)
 - [License](#license)
 
-
 ## 🦷 About the project
+
 <p align="justify">
 Introducing <strong>Dental Procs</strong>, a specialized application designed for dentists to monitor 
  the most performed procedures in their clinics and track performance trends over time. 
@@ -74,7 +73,7 @@ The app permit dentists to create new procedures, associating them with specific
   </table>
 </div>
 
-*Website: Render web services have a delay of about 30 seconds in the response of the first request after a period of inactivity while the instance spins up.*
+_Website: Render web services have a delay of about 30 seconds in the response of the first request after a period of inactivity while the instance spins up._
 
 <!-- <div align="center">
 
@@ -129,19 +128,22 @@ The app permit dentists to create new procedures, associating them with specific
 </table> -->
 
 <!-- <p align="center" width="100%">
-    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web2.jpg"> 
-    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web3.jpg"> 
-    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web4.jpg"> 
+    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web2.jpg">
+    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web3.jpg">
+    <img width="32%" src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/web/public/assets/web4.jpg">
 </p> -->
+
 ---
 
 ### Build with
+
 ![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ### Requirements
+
 - npm (^9.5.0)
 - react(^18.2.0)
 - [vite](https://vitejs.dev/guide/)
@@ -152,28 +154,31 @@ The app permit dentists to create new procedures, associating them with specific
 - [phosphor-icons](https://phosphoricons.com/)
 
 ### Instalattion
+
 1. Clone the repository.<br>
-`git clone https://github.com/gabrielpenteado/dentalprocs`
+   `git clone https://github.com/gabrielpenteado/dentalprocs`
 
-2. Install the [***server***](#-server) and run it.
+2. Install the [**_server_**](#-server) and run it.
 
-3. Access the ***web*** folder in the terminal.
+3. Access the **_web_** folder in the terminal.
 
-4. Install all packages dependencies.<br> 
-`npm install`
+4. Install all packages dependencies.<br>
+   `npm install`
 
 5. Start using.<br>
-`npm run dev`
+   `npm run dev`
 
 ### Browser Support
-[<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png" alt="Chrome" />](https://www.google.com/intl/en/chrome/)<br> Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_24x24.png" alt="Edge" />](https://www.microsoft.com/en-us/edge)<br> Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_24x24.png" alt="Firefox" />](https://www.mozilla.org/en-US/firefox/new/)<br> Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_24x24.png" alt="Safari" />](https://www.apple.com/br/safari/)<br> Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_24x24.png" alt="Opera" />](https://www.opera.com)<br> Opera 
-|:------------:|:------------:|:-----------: |:------------:|:------------:|
-|      ✅      |      ✅      |     ✅      |      ✅      |      ✅      |
-| last version | last version | last version | last version | last version |
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png" alt="Chrome" />](https://www.google.com/intl/en/chrome/)<br> Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_24x24.png" alt="Edge" />](https://www.microsoft.com/en-us/edge)<br> Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_24x24.png" alt="Firefox" />](https://www.mozilla.org/en-US/firefox/new/)<br> Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_24x24.png" alt="Safari" />](https://www.apple.com/br/safari/)<br> Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_24x24.png" alt="Opera" />](https://www.opera.com)<br> Opera |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                   ✅                                                                                   |                                                                              ✅                                                                              |                                                                                       ✅                                                                                       |                                                                                ✅                                                                                |                                                                        ✅                                                                         |
+|                                                                              last version                                                                              |                                                                         last version                                                                         |                                                                                  last version                                                                                  |                                                                           last version                                                                           |                                                                   last version                                                                    |
 
 <br>
 
 ## 📱 Mobile version
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/gabrielpenteado/dentalprocs/main/mobile//assets/mobile.jpg">
 </div>
@@ -181,12 +186,14 @@ The app permit dentists to create new procedures, associating them with specific
 ---
 
 ### Build with
+
 ![expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
 ![react-native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ### Requirements
+
 - npm (^9.5.0)
 - react-native (0.71.8)
 - [expo](https://docs.expo.dev/) (~48.0.10)
@@ -195,32 +202,35 @@ The app permit dentists to create new procedures, associating them with specific
 - [victory-native](https://formidable.com/open-source/victory/docs/native/)
 
 ### Instalattion
+
 1. Clone the repository.<br>
-`git clone https://github.com/gabrielpenteado/dentalprocs`
+   `git clone https://github.com/gabrielpenteado/dentalprocs`
 
-2. Install the [***server***](#-server) and run it.
+2. Install the [**_server_**](#-server) and run it.
 
-3. Access the ***mobile*** folder in the terminal.
+3. Access the **_mobile_** folder in the terminal.
 
-4. Install all packages dependencies.<br> 
-`npm install`
+4. Install all packages dependencies.<br>
+   `npm install`
 
 5. Start with expo.<br>
-`npx expo start`
-<br>
+   `npx expo start`
+   <br>
 
 ## 📡 Server
 
 ### Build with
+
 ![fastify](https://img.shields.io/badge/fastify-202020?style=for-the-badge&logo=fastify&logoColor=white)
 ![prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
 ![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![sqlite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 ![node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-*Note: You can find the server integrated with other databases such as ![mysql](https://img.shields.io/badge/MySQL-005C84?style=flat-square&logo=mysql&logoColor=white) and ![postgresql](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white) in [dentalprocs-server](https://github.com/gabrielpenteado/dentalprocs-server) repository.* 
+_Note: You can find the server integrated with other databases such as ![mysql](https://img.shields.io/badge/MySQL-005C84?style=flat-square&logo=mysql&logoColor=white) and ![postgresql](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white) in [dentalprocs-server](https://github.com/gabrielpenteado/dentalprocs-server) repository._
 
 ### Requirements
+
 - npm (^9.5.0)
 - [fastify](https://www.fastify.io/)
 - [prisma](https://www.prisma.io/docs/getting-started/quickstart)
@@ -229,23 +239,26 @@ The app permit dentists to create new procedures, associating them with specific
 - [node.js](https://nodejs.org/en) (v18.15.0)
 
 ### Instalattion
+
 1. Clone the repository.<br>
-`git clone https://github.com/gabrielpenteado/dentalprocs`
+   `git clone https://github.com/gabrielpenteado/dentalprocs`
 
-2. Access the ***server*** folder in the terminal.
+2. Access the **_server_** folder in the terminal.
 
-3. Install all packages dependencies.<br> 
-`npm install`
+3. Install all packages dependencies.<br>
+   `npm install`
 
 4. Run server.<br>
-`npm run dev`
-<br>
+   `npm run dev`
+   <br>
 
 ## 🤝 Contributions
+
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 The foundation of the open source community are the contributions, them inspire us to learn and create. Any contributions are greatly appreciated.
 
 ## 📄 License
+
 This project is licensed under the MIT License. See the [LICENSE.md](https://github.com/gabrielpenteado/dentalprocs/blob/main/LICENSE.md) file for details.
 <br>
 <br>
@@ -257,9 +270,10 @@ This project is licensed under the MIT License. See the [LICENSE.md](https://git
   <br/>
   <br/>
 
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-penteado)
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gabrielpenteado)
-  [![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com)
-  <br />
-  <br />
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-penteado)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gabrielpenteado)
+[![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com)
+<br />
+<br />
+
 </div>

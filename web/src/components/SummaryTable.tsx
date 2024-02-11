@@ -7,11 +7,12 @@ import { ProcedureDay } from "./ProcedureDay";
 import { Tooth } from "@phosphor-icons/react";
 import dayjs from "dayjs";
 
-const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+const weekDays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+// const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
 const summaryDates = generateDatesFromYearBeginning();
 
-const minimunSummaryDatesSize = 52 * 7 // 2418 weeks or 24 * 7 = 24 weeks
+const minimunSummaryDatesSize = 366; // 52 * 7 or 24 * 7 = 24 weeks // 365 or 366 days in the current year.
 const amountOfDaysToFill = minimunSummaryDatesSize - summaryDates.length;
 // console.log(amountOfDaysToFill);
 
@@ -20,16 +21,16 @@ type Summary = {
   date: string;
   amount: number;
   completed: number;
-}[]
+}[];
 
 export function SummaryTable() {
   const [summary, setSummary] = useState<Summary>([]);
 
   useEffect(() => {
-    api.get('summary').then(response => {
+    api.get("summary").then((response) => {
       setSummary(response.data);
-    })
-  }, []) // this empty array make the function inside the useEffect execute only one time(the first time that the component render)
+    });
+  }, []); // this empty array make the function inside the useEffect execute only one time(the first time that the component render)
 
   return (
     <div className="w-full flex justify-center">
@@ -38,64 +39,69 @@ export function SummaryTable() {
           return (
             <div
               key={`${weekDay}-${index}`}
-              className="text-zinc-300 text-xl h-10 w-10 font-bold flex items-center justify-center">
+              className="text-zinc-300 text-xl h-10 w-10 font-bold flex items-center justify-center"
+            >
               {weekDay}
             </div>
-          )
+          );
         })}
       </div>
 
-      <div className="grid grid-rows-7 grid-flow-col gap-3 overflow-x-scroll scrollbar-thin
+      <div
+        className="grid grid-rows-7 grid-flow-col gap-3 overflow-x-scroll scrollbar-thin
          scrollbar-thumb-teal-600 hover:scrollbar-thumb-teal-400 scrollbar-track-zinc-600
-          scrollbar-thumb-rounded scrollbar-track-rounded pb-3 pt-3 pl-1">
-        {summary.length > 0 && summaryDates.map(date => {
-          const dayInSummary = summary.find(day => {
-            return dayjs(date).isSame(day.date, 'day')
-          })
+          scrollbar-thumb-rounded scrollbar-track-rounded pb-3 pt-3 pl-1"
+      >
+        {summary.length > 0 &&
+          summaryDates.map((date) => {
+            const dayInSummary = summary.find((day) => {
+              return dayjs(date).isSame(day.date, "day");
+            });
 
-          return (
-            <ProcedureDay
-              key={date.toString()}
-              date={date}
-              amount={dayInSummary?.amount}
-              defaultCompleted={dayInSummary?.completed}
-            />)
-
-          // return (
-          //   <ProcedureDay
-          //     key={date.toString()}
-          //     date={date}
-          //     amount={4}
-          //     defaultCompleted={Math.round(Math.random() * 4)}
-          //   />
-          // )
-          // This return code is for populate all days and have a visual knowledge of the app.
-
-        })}
-
-        {amountOfDaysToFill > 0 && Array.from({ length: amountOfDaysToFill }).map((_, index) => {
-          return (
-
-            <div key={index} className="cursor-not-allowed pointer-events-none">
-              <Tooth
-                alt="tooth icon"
-                size="2.5rem"
-                weight="duotone"
-                color="#27272A"
+            return (
+              <ProcedureDay
+                key={date.toString()}
+                date={date}
+                amount={dayInSummary?.amount}
+                defaultCompleted={dayInSummary?.completed}
               />
-            </div>
+            );
 
-            // <div
-            //   key={index}
-            //   className="opacity-40 cursor-not-allowed pointer-events-none"
-            // >
-            //   <ProcedureDay amount={0} completed={0} date={dayjs().format('MM/DD')} />
-            // </div>
-          )
-        })}
+            // return (
+            //   <ProcedureDay
+            //     key={date.toString()}
+            //     date={date}
+            //     amount={4}
+            //     defaultCompleted={Math.round(Math.random() * 4)}
+            //   />
+            // )
+            // This return code is for populate all days and have a visual knowledge of the app.
+          })}
 
+        {amountOfDaysToFill > 0 &&
+          Array.from({ length: amountOfDaysToFill }).map((_, index) => {
+            return (
+              <div
+                key={index}
+                className="cursor-not-allowed pointer-events-none"
+              >
+                <Tooth
+                  alt="tooth icon"
+                  size="2.5rem"
+                  weight="duotone"
+                  color="#27272A"
+                />
+              </div>
+
+              // <div
+              //   key={index}
+              //   className="opacity-40 cursor-not-allowed pointer-events-none"
+              // >
+              //   <ProcedureDay amount={0} completed={0} date={dayjs().format('MM/DD')} />
+              // </div>
+            );
+          })}
       </div>
-
     </div>
-  )
+  );
 }
