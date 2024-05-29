@@ -40,8 +40,7 @@
 <p align="justify">
 Introducing <strong>Dental Procs</strong>, a specialized application designed for dentists to monitor 
  the most performed procedures in their clinics and track performance trends over time. 
-The app permit dentists to create new procedures, associating them with specific days of the week,
- and provides a comprehensive chart that offers an overview of procedure frequency.
+The app permits dentists to create new procedures, associate them with specific days of the week, and provides a comprehensive chart that offers an overview of procedure frequency.
 </p>
 
 <div align="center">
@@ -73,7 +72,7 @@ The app permit dentists to create new procedures, associating them with specific
   </table>
 </div>
 
-_Website: Render web services have a delay of about 30 seconds in the response of the first request after a period of inactivity while the instance spins up._
+_Website: Render web services have a delay of about 50 seconds in the response of the first request after a period of inactivity while the instance spins up._
 
 <!-- <div align="center">
 
