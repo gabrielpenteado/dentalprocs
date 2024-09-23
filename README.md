@@ -14,7 +14,7 @@
 
   <img src="https://img.shields.io/static/v1?label=npm&message=v9.5.0&color=informational&style=flat-square" alt="npm version">
 
-  <img src="https://img.shields.io/website?down_color=red&down_message=offline&style=flat-square&up_color=008000&up_message=online&url=https%3A%2F%2Fdentalprocs.onrender.com" alt="website status">
+  <img src="https://img.shields.io/website?down_color=red&down_message=offline&style=flat-square&up_color=008000&up_message=online&url=https%3A%2F%2Fdentalprocs.vercel.app" alt="website status">
 </div>
 
 ## 📑 Contents
@@ -64,16 +64,14 @@ The app permits dentists to create new procedures, associate them with specific 
           </a>
         </td>  
         <td>
-          <a href="https://dentalprocs.onrender.com">
-            <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" />
+          <a href="https://dentalprocs.vercel.app">
+            <img src="https://img.shields.io/badge/Vercel-000?logo=vercel&logoColor=fff&style=for-the-badge" />
           </a>
         </td>  
       </tr>
     </tbody>
   </table>
 </div>
-
-_Website: Render web services have a delay of about 50 seconds in the response of the first request after a period of inactivity while the instance spins up._
 
 <!-- <div align="center">
 
